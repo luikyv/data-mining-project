@@ -5,7 +5,7 @@ from typing import List
 
 class Config:
     CHROME_DRIVER_LOCAL_PATH: str = f"{pathlib.Path(__file__).parent}/chromedriver"
-    LOCAL_DATA_FOLDER_PATH: str = f"{pathlib.Path(__file__).parent}/data"
+    LOCAL_DATA_FOLDER_PATH: str = f"{pathlib.Path(__file__).parent.parent}/data"
     GOOGLE_DATE_FORMAT: str = "%m/%d/%Y"
     MAX_TIMEOUT_SECS: int = 20
     TAG_BLACKLIST: List[str] = [

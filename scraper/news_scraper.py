@@ -13,14 +13,13 @@ from typing import List
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
+from config import Config
 from selenium import webdriver
 from selenium.common import exceptions as selenium_exceptions
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from tqdm import tqdm
 from unidecode import unidecode
-
-from config import Config
 
 
 class BotDetectedException(Exception):
@@ -38,7 +37,7 @@ class DailyNews:
     keyword_match_counter: dict[str, int] = field(default_factory=dict[str, int])
 
 
-class NewsScrapper:
+class NewsScraper:
     def __init__(self, headless: bool = True) -> None:
 
         self.headless = headless

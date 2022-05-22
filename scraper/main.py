@@ -3,7 +3,7 @@ from datetime import datetime
 from typing import List
 
 from config import Config
-from news_scrapper import NewsScrapper
+from news_scraper import NewsScraper
 
 waterlogging_locals: List[str] = [
     "rua geraldo barbosa",
@@ -24,8 +24,8 @@ if __name__ == "__main__":
 
     warnings.filterwarnings("ignore")
 
-    news_scrapper = NewsScrapper(
-        headless=True,
+    news_scrapper = NewsScraper(
+        headless=False,
     )
     news_scrapper.scrap_news(
         search_keywords=search_keywords,
